@@ -6,96 +6,60 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.4</version>
+		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.jtspringproject</groupId>
-	<artifactId>JtSpringProject</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>JtSpringProject</name>
-	<description>Spring project for Java Technology</description>
+	<groupId>com.example</groupId>
+	<artifactId>springboot</artifactId>
+	<version>1.0.0</version>
+	<name>springboot</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
-	
 	<dependencies>
-	
-	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
-		
-		<dependency>
-  			<groupId>org.apache.maven.plugins</groupId>
-  			<artifactId>maven-compiler-plugin</artifactId>
-  			<version>3.10.1</version>
-  			<type>maven-plugin</type>
-		</dependency>
-		
-		
-		<dependency>
-    			<groupId>mysql</groupId>
-    			<artifactId>mysql-connector-java</artifactId>
-    			<version>8.0.28</version>
-		</dependency>
-		
-		
 	</dependencies>
 
 	<build>
 		<plugins>
 			
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
             			<artifactId>maven-war-plugin</artifactId>
-            			<version>2.6.4</version>
-			<configuration>
-				<!-- <warSourceDirectory>ProjectWeb</warSourceDirectory> --> <!-- <warSourceDirectory></warSourceDirectory> -->
-    				<failOnMissingWebXml>false</failOnMissingWebXml>
-			</configuration>
+            			<version>3.3.1</version>
+					<configuration>
+	<!-- <warSourceDirectory>ProjectWeb</warSourceDirectory> --> <!-- <warSourceDirectory></warSourceDirectory> -->
+    						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
 			</plugin>
 			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
-                			<execution>
-                    					<configuration>
-                        					<finalName>ownecommerce</finalName>
-                    					</configuration>
-                			</execution>
-            			</executions>
+                <execution>
+                    <id>repackage</id>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                    <configuration>
+                        <finalName>ownecommerce</finalName>
+                    </configuration>
+                </execution>
+            </executions>
 			</plugin>
+			
+			
 			
 		</plugins>
 	</build>
