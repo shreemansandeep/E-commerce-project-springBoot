@@ -38,6 +38,10 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<dependency org="org.apache.maven.plugins" name="maven-surefire-plugin" rev="3.0.0-M7">
+  <artifact name="maven-surefire-plugin" type="maven-plugin" />
+</dependency>
+		
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
