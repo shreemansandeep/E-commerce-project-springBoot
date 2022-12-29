@@ -10,7 +10,7 @@ pipeline{
       }
     }
     
-    stage('Git Checkout'){
+    stage('Maven Build'){
       steps{
         sh 'mvn clean package'
       }
