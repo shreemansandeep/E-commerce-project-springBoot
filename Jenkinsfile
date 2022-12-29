@@ -10,7 +10,11 @@ pipeline{
       }
     }
     
-    
+    stage('Git Checkout'){
+      steps{
+        sh 'mvn clean package'
+      }
+    }
     
     
   }
