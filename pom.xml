@@ -53,7 +53,7 @@
 		<dependency>
   			<groupId>org.apache.maven.plugins</groupId>
   			<artifactId>maven-compiler-plugin</artifactId>
-  			<version>2.6</version>
+  			<version>3.10.1</version>
   			<type>maven-plugin</type>
 		</dependency>
 		
@@ -78,7 +78,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
             			<artifactId>maven-war-plugin</artifactId>
-            			<version>2.6.4</version>
+            			<version>3.3.1</version>
 			<configuration>
 				<!-- <warSourceDirectory>ProjectWeb</warSourceDirectory> --> <!-- <warSourceDirectory></warSourceDirectory> -->
     				<failOnMissingWebXml>false</failOnMissingWebXml>
